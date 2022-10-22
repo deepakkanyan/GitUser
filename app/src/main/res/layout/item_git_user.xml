@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="gitUser"
+            type="com.example.gitusers.data.model.GitUserInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gu_imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="@dimen/dimen_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:userIcon="@{gitUser.avatarUrl}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tx_tv_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:text="@{String.valueOf(gitUser.type)}"
+            app:layout_constraintStart_toEndOf="@+id/gu_imageView"
+            app:layout_constraintTop_toTopOf="@id/gu_imageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tx_tv_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@{String.valueOf(gitUser.following)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gu_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/tx_tv_followers" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
