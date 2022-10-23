@@ -1,14 +1,12 @@
-package com.example.gitusers.ui.userlist
+package com.example.gitusers.ui.gitusers
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.gitusers.R
 import com.example.gitusers.databinding.FragmentGitUserListBinding
 import com.example.gitusers.presenter.GitUserListViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel

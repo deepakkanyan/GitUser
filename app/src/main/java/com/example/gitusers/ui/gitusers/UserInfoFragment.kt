@@ -1,4 +1,4 @@
-package com.example.gitusers.ui
+package com.example.gitusers.ui.gitusers
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,11 +12,11 @@ import com.example.gitusers.databinding.FragmentUserInfoBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment() {
+class UserInfoFragment : Fragment() {
 
     private var _binding:  FragmentUserInfoBinding? = null
     private val binding get() = _binding!!
-    val args: SecondFragmentArgs by navArgs()
+    val args: UserInfoFragmentArgs by navArgs()
 
 
     override fun onCreateView(
@@ -32,7 +32,6 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.gitUser = args.userID
-
     }
 
     override fun onDestroyView() {

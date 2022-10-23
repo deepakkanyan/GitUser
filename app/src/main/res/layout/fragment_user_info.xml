@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.SecondFragment">
+        tools:context=".ui.gitusers.UserInfoFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/userImage"
@@ -45,7 +45,7 @@
             android:id="@+id/tx_tv_followers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{gitUser.followers}"
+            android:text="@{String.valueOf(gitUser.followers)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userImage" />
 
@@ -53,7 +53,7 @@
             android:id="@+id/tx_tv_follwing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{gitUser.following}"
+            android:text="View Following"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userName" />
 

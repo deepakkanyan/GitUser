@@ -3,36 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/GitUserListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.gitusers.ui.userlist.GitUserListFragment"
+        android:id="@+id/GitUserListFragment"
+        android:name="com.example.gitusers.ui.gitusers.GitUserListFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_git_user_list">
 
-
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment"
-            >
-        </action>
-
+            app:destination="@id/GitUserInfoFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.gitusers.ui.SecondFragment"
+        android:id="@+id/GitUserInfoFragment"
+        android:name="com.example.gitusers.ui.gitusers.UserInfoFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_user_info">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
         <argument
             android:name="userID"
+            android:defaultValue="@null"
             app:argType="com.example.gitusers.data.model.GitUserInfo"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 </navigation>

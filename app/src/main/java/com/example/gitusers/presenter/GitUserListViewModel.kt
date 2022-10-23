@@ -12,7 +12,7 @@ import com.example.gitusers.module.baseReponse.Status
 import kotlinx.coroutines.launch
 
 
-class GitUserListViewModel( val githubApiClient: GitUserClient) : ViewModel() {
+class GitUserListViewModel(private val githubApiClient: GitUserClient) : ViewModel() {
 
 
     private val _gitUserList = MutableLiveData<GitUserList?>()
@@ -32,10 +32,9 @@ class GitUserListViewModel( val githubApiClient: GitUserClient) : ViewModel() {
 
     init {
         fetchUser()
-        _isError.value = true
     }
 
-      fun fetchUser() {
+      private fun fetchUser() {
         viewModelScope.launch {
 
             val response = githubApiClient.getUsersList(1, 25)

@@ -1,4 +1,4 @@
-package com.example.gitusers.ui.userlist
+package com.example.gitusers.ui.gitusers
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
