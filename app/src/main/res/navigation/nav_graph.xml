@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_user_info">
 
         <argument
-            android:name="userID"
+            android:name="user"
             android:defaultValue="@null"
             app:argType="com.example.gitusers.data.model.GitUserInfo"
             app:nullable="true" />
